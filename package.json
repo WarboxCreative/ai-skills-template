@@ -1,0 +1,57 @@
+{
+  "name": "@SCOPE_NAME/ai-skills-STACK_NAME",
+  "version": "1.0.0",
+  "description": "CLI for distributing Claude Code skills for STACK_NAME projects",
+  "private": false,
+  "type": "module",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SCOPE_NAME/ai-skills-STACK_NAME.git"
+  },
+  "main": "dist/index.js",
+  "bin": {
+    "ai-skills-STACK_NAME": "bin/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "skills"
+  ],
+  "keywords": [
+    "claude",
+    "claude-code",
+    "skills",
+    "STACK_NAME",
+    "cli"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^9.3.7"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.3.1",
+    "@commitlint/config-conventional": "^20.3.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^20.17.10",
+    "commitlint": "^20.3.1",
+    "husky": "^9.1.7",
+    "semantic-release": "^25.0.2",
+    "typescript": "^5.7.2"
+  }
+}
